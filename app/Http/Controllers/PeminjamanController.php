@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AnggotaController extends Controller
+class PeminjamanController extends Controller
 {
-    /**
+      /**
      * Display a listing of the resource.
      */
     public function index()
@@ -19,7 +19,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        return view('template.perpustakaan.anggota');
+        return view('template.perpustakaan.peminjaman');
     }
 
     /**
@@ -62,3 +62,4 @@ class AnggotaController extends Controller
         //
     }
 }
+
