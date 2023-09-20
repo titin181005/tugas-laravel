@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content-wrapper">
-<div class="card card-success">
+<div class="card card-secondary">
               <div class="card-header">
                 <h3 class="card-title">Form Input Data Anggota</h3>
               </div>
@@ -12,25 +12,36 @@
               <form action="{{ route('anggota.store') }}" method="POST">
                 @csrf
               <div class="card-body">
-              <div class="card card-success">
+              <div class="card card-secondary">
               <div class="card-header">
                 <h3 class="card-title">Data Anggota</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
+           <!-- form start -->
               <form>
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Kode Anggota</label>
-                    <input type="text" class="form-control" name="kode" placeholder="Input Kode Anggota">
+                    <input type="text" class="form-control @error('kode') is-invalid @enderror " name="kode" placeholder="Input Kode Anggota">
+                    @error('kode')
+                          <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
                     <label for="exampleInputEmail1">Nama Anggota</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Input Nama Anggota">
+                    <input type="text" class="form-control @error('nama') is-invalid @enderror " name="nama" placeholder="Input Nama Anggota">
+                    @error('nama')
+                          <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
+
                         <label>Jenis Kelamin</label>
                         <select type="text" name="jk" class="form-control">
                           <option disabled selectdes>Jenis Kelamin</option>
                           <option value="P">Perempuan</option>
                           <option value="L">Laki-Laki</option>
                         </select>
+
                         <label>Jurusan</label>
                         <select type="text" name="jurusan" class="form-control">
                           <option disabled selectdes>Jurusan</option>
@@ -46,17 +57,25 @@
                           <option value="tflm">TFLM</option>
                           <option value="tpl">TPL</option>
                         </select>
+
                     <label for="exampleInputEmail1">No Telepon</label>
-                    <input type="number" class="form-control" name="tlp" placeholder="Input No Tlp Anggota">
+                    <input type="number" class="form-control @error('telp') is-invalid @enderror " name="telp" placeholder="Input No Telp Anggota">
+                    @error('telp')
+                          <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
+
                     <label for="exampleInputEmail1">Alamat Anggota</label>
-                    <input type="text" class="form-control" name="alamat" placeholder="Input Alamat Anggota">
+                    <input type="text" class="form-control @error('alamat') is-invalid @enderror " name="alamat" placeholder="Input Alamat Anggota">
+                    @error('alamat')
+                          <div class="alert alert-danger">{{ $message }}</div>
+                    @enderror
                   </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-success">Submit</button>
-                  <button type="reset" class="btn btn-success">Reset</button>
-                  <a href="" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Kembali</a>
+                  <button type="submit" class="btn btn-secondary">Submit</button>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                  <a href="" class="btn btn-secondary" data-toggle="modal" data-target="#exampleModal">Kembali</a>
                 </div>
               </form>
             </div>

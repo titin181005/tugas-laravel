@@ -35,7 +35,7 @@
               <div class="card-header">
                   <h3 class="card-title">Data Anggota</h3>
                 </div>
-                <a href="{{ route('anggota.create') }}" class="btn btn-small btn-success">Create</a>
+                <a href="{{ route('anggota.create') }}" class="btn btn-small btn-secondary">Create</a>
             <!-- /.card-header -->
             <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
@@ -63,7 +63,7 @@
                         <td>{{ $value->alamat_anggota }}</td>
                         <td class="d-flex" style="gap:10px">
                         <a href="{{ route('anggota.show', $value->id) }}" class="btn btn-small btn-info">Detail</a>
-                        <a href="{{ route('anggota.edit', $value->id) }}" class="btn btn-small btn-success">Edit</a>
+                        <a href="{{ route('anggota.edit', $value->id) }}" class="btn btn-small btn-secondary">Edit</a>
                       <a href="" type="sumbit" class="btn btn-small btn-danger" data-toggle="modal" data-target="#exampleModal">hapus</a>
                         </td>
                     </tr>
