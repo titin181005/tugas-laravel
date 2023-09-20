@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content-wrapper">
-<div class="card card-warning">
+<div class="card card-success">
               <div class="card-header">
                 <h3 class="card-title">Form Detail Data Anggota</h3>
               </div>
@@ -13,7 +13,7 @@
                 @csrf
                 @method('PUT')
               <div class="card-body">
-              <div class="card card-warning">
+              <div class="card card-success">
               <div class="card-header">
                 <h3 class="card-title">Data Anggota</h3>
               </div>
@@ -55,8 +55,8 @@
                   </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                <button type="submit" class="btn btn-warning">Update</button>
-                <a href="" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Kembali</a>
+                <button type="submit" class="btn btn-success">Update</button>
+                <a href="" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Kembali</a>
                 </div>
               </form>
             </div>

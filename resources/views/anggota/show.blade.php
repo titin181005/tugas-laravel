@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="content-wrapper">
-<div class="card card-info">
+<div class="card card-success">
               <div class="card-header">
                 <h3 class="card-title">Form Detail Data Anggota</h3>
               </div>
@@ -12,7 +12,7 @@
               <form action="{{ route('anggota.store') }}" method="POST">
                 @csrf
               <div class="card-body">
-              <div class="card card-info">
+              <div class="card card-success">
               <div class="card-header">
                 <h3 class="card-title">Data Anggota</h3>
               </div>
@@ -53,7 +53,7 @@
                   </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                <a href="" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Kembali</a>
+                <a href="" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Kembali</a>
                 </div>
               </form>
             </div>
